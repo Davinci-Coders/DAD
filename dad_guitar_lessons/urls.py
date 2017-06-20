@@ -17,16 +17,17 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from schedule.views import home, lesson_main, lesson_submit, login_view, logout_view
-from todos.views import todos
+from todos.views import new_todo, todos
 
 urlpatterns = [
 
     url(r'^admin/', admin.site.urls),
     url(r'^lessons/', lesson_main, name='lesson_main'),
+
     url(r'^$', login_view, name='login_view'),
     url(r'^logout/', logout_view, name='logout_view'),
+
+    url(r'^new-todo/', new_todo, name='new_todo'),
     url(r'^todos/', todos, name='todos'),
     url(r'^home/', home, name='home'),
-    
-
 ]

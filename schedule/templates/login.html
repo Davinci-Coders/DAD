@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 
 <html>
-	
 
-	<head>
-		<title>Login</title>
 
-	</head>
+    <head>
+        <title>Login</title>
 
-	<body>
-	
-	<h1>Login</h1>
+    </head>
 
-	<form method="POST">
-	{{ form.as_p }}
-	{% csrf_token %}
-	<input type="submit" value="SUBMIT"/>
-	</form>
+    <body>
 
-	{% if user.is_authenticated %}
-	<h5>You are logged in</h5>
-	<a href="/home/">HOME</a>
-	{% endif%}
+    <h1>Login</h1>
 
-	<h5>{{ msg }}</h5>
-	
-	
+    <form method="POST">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" value="SUBMIT"/>
+    </form>
 
-	</body>
+    {% if user.is_authenticated %}
+    <h5>You are logged in</h5>
+    <a href="/home/">HOME</a>
+    {% endif%}
 
-	</html>
-	
+    <h5>{{ msg }}</h5>
 
-	<!--  -->
+
+
+    </body>
+
+    </html>
+
+
+    <!--  -->
 
